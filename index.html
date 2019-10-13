@@ -1,327 +1,330 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta content="en-us" http-equiv="Content-Language" />
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>主页</title>
+	<meta content="en-us" http-equiv="Content-Language" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Page</title>
 </head>
 <style>
-
-*{
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	text-align: center;
-	/*
-	background-image:url('img/bg.png') !important;
-	*/
-	background-size: 100% !important;
-	background-repeat: no-repeat;
-}
-
-img.smaller {
-	width: 220px;
-	height: 100px;
-	max-width: 250px;
-	animation: flipInX 4s;
-	-webkit-animation: flipInX 4s
-}
-
-.logo {
-	font-size: 2em;
-	white-space: normal;
-	word-wrap: break-word;
-	text-decoration: none;
-	color: #232323
-}
-
-#search_input {
-	width: 90%;
-	height: 40px;
-	background-color: transparent;
-	border: none;
-	outline: 0;
-	font-size: 14px;
-	color: #000000;
-	padding: 0 20px;
-	border-radius: 50px
-}
-
-.search_part {
-	margin-bottom: 30px;
-	margin-top: 20px;
-}
-
-span {
-	display: block;
-	overflow: hidden;
-	padding-left: 5px;
-	vertical-align: middle;
-}
-
-.search_bar {
-	box-shadow: 0 0 18px rgba(70,70,40,.255);
-	-webkit-animation: fadeIn 2.5s;
-	animation: fadeIn 2.5s;
-	background-color: rgba(255,255,255,.100);
-	border-radius: 50px;
-	display: table;
-	vertical-align: middle;
-	width: 80%;
-	height: 40px;
-	max-width: 400px;
-	margin: 10px auto;
-}
-
-#search_submit {
-	outline: 0;
-	height: 40px;
-	float: right;
-	color: #000;
-	font-size: 16px;
-	font-weight: 700;
-	border: none;
-	background-color: transparent;
-	padding: 0 13px 0 13px
-}
-
-
-#content {
-	width: 100%;
-	text-align: center;
-	padding-top: 15px;
-	padding-bottom: 15px;
-}
-
-
-.box {
-	-webkit-animation: fadeInDown 1s;
-	animation: fadeInDown 1s;
-	position: relative;
-	display: inline-block;
-	width: 75px;
-	border: 0;
-}
-
-.box a {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-
-.url {
-	color: #000000;
-	height: 1.5em;
-	line-height: 1.5em;
-	width: 72px;
-	font-size: 0.75em;
-	white-space: nowrap;
-	overflow: hidden;
-	margin: auto;
-	-webkit-border-top-right-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	text-overflow: ellipsis;
-	-o-text-overflow: ellipsis;
-	-ms-text-overflow: ellipsis;
-	padding-top: 3px;
-	padding-bottom: 8px;
-}
-
-
-.icon {
-	width: 3em;
-	height: 3em;
-	max-width: 72px;
-}
-
-@-webkit-keyframes flipInX {
-	0% {
-		-webkit-transform: perspective(400px) rotateX(90deg);
-		transform: perspective(400px) rotateX(90deg);
-		opacity: 0
+	@font-face {
+		font-family: 'Ubuntu';
+		src: url('/Font/Ubuntu.ttf');
 	}
 
-	40% {
-		-webkit-transform: perspective(400px) rotateX(-10deg);
-		transform: perspective(400px) rotateX(-10deg)
+	* {
+		padding: 0;
+		margin: 0;
 	}
 
-	70% {
-		-webkit-transform: perspective(400px) rotateX(10deg);
-		transform: perspective(400px) rotateX(10deg)
+	body {
+		font-family: 'Ubuntu';
+		text-align: center;
+		background-color: #000000;
 	}
 
-	100% {
-		-webkit-transform: perspective(400px) rotateX(0);
-		transform: perspective(400px) rotateX(0);
-		opacity: 1
-	}
-}
-
-@keyframes flipInX {
-	0% {
-		-webkit-transform: perspective(400px) rotateX(90deg);
-		-ms-transform: perspective(400px) rotateX(90deg);
-		transform: perspective(400px) rotateX(90deg);
-		opacity: 0
+	img.smaller {
+		height: 92px;
+		width: 272px;
+		animation: flipInX 4s;
+		-webkit-animation: flipInX 4s
 	}
 
-	40% {
-		-webkit-transform: perspective(400px) rotateX(-10deg);
-		-ms-transform: perspective(400px) rotateX(-10deg);
-		transform: perspective(400px) rotateX(-10deg)
+	.logo {
+		font-size: 2em;
+		white-space: normal;
+		word-wrap: break-word;
+		text-decoration: none;
+		color: #232323
 	}
 
-	70% {
-		-webkit-transform: perspective(400px) rotateX(10deg);
-		-ms-transform: perspective(400px) rotateX(10deg);
-		transform: perspective(400px) rotateX(10deg)
+	#search_input {
+		width: 90%;
+		height: 40px;
+		background-color: transparent;
+		border: none;
+		outline: 0;
+		font-size: 18px;
+		color: #fff;
+		padding: 0 20px;
+		border-radius: 50px
 	}
 
-	100% {
-		-webkit-transform: perspective(400px) rotateX(0);
-		-ms-transform: perspective(400px) rotateX(0);
-		transform: perspective(400px) rotateX(0);
-		opacity: 1
-	}
-}
-
-@-webkit-keyframes fadeIn {
-	0% {
-		opacity: 0
+	.search_part {
+		margin-bottom: 30px;
+		margin-top: 150px;
 	}
 
-	100% {
-		opacity: 1
-	}
-}
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0
+	span {
+		display: block;
+		overflow: hidden;
+		padding-left: 5px;
+		vertical-align: middle;
 	}
 
-	100% {
-		opacity: 1
-	}
-}
-
-@-webkit-keyframes fadeInDown {
-	0% {
-		opacity: 0;
-		-webkit-transform: translateY(-20px);
-		transform: translateY(-20px)
-	}
-
-	100% {
-		opacity: 1;
-		-webkit-transform: translateY(0);
-		transform: translateY(0)
-	}
-}
-
-@keyframes fadeInDown {
-	0% {
-		opacity: 0;
-		-webkit-transform: translateY(-20px);
-		-ms-transform: translateY(-20px);
-		transform: translateY(-20px)
+	.search_bar {
+		box-shadow: 0 0 18px rgba(70, 70, 40, .255);
+		-webkit-animation: fadeIn 2.5s;
+		animation: fadeIn 2.5s;
+		background-color: rgba(255, 255, 255, .100);
+		border-radius: 50px;
+		display: table;
+		vertical-align: middle;
+		width: 80%;
+		height: 40px;
+		max-width: 500px;
+		margin: 10px auto;
 	}
 
-	100% {
-		opacity: 1;
-		-webkit-transform: translateY(0);
-		-ms-transform: translateY(0);
-		transform: translateY(0)
+	#search_submit {
+		outline: 0;
+		height: 40px;
+		float: right;
+		color: #000;
+		font-size: 16px;
+		font-weight: 700;
+		border: none;
+		background-color: transparent;
+		padding: 0 13px 0 13px
 	}
-}
+
+
+	#content {
+		width: 100%;
+		text-align: center;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+
+	.box {
+		-webkit-animation: fadeInDown 1s;
+		animation: fadeInDown 1s;
+		position: relative;
+		display: inline-block;
+		width: 75px;
+		border: 0;
+	}
+
+	.box a {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.url {
+		height: 1.5em;
+		line-height: 1.5em;
+		width: 72px;
+		font-size: 0.75em;
+		color: #fff;
+		white-space: nowrap;
+		overflow: hidden;
+		margin: auto;
+		-webkit-border-top-right-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+		-ms-text-overflow: ellipsis;
+		padding-top: 3px;
+		padding-bottom: 8px;
+	}
+
+	.icon {
+		width: 3em;
+		height: 3em;
+		max-width: 72px;
+	}
+
+
+	@-webkit-keyframes flipInX {
+		0% {
+			-webkit-transform: perspective(400px) rotateX(90deg);
+			transform: perspective(400px) rotateX(90deg);
+			opacity: 0
+		}
+
+		40% {
+			-webkit-transform: perspective(400px) rotateX(-10deg);
+			transform: perspective(400px) rotateX(-10deg)
+		}
+
+		70% {
+			-webkit-transform: perspective(400px) rotateX(10deg);
+			transform: perspective(400px) rotateX(10deg)
+		}
+
+		100% {
+			-webkit-transform: perspective(400px) rotateX(0);
+			transform: perspective(400px) rotateX(0);
+			opacity: 1
+		}
+	}
+
+	@keyframes flipInX {
+		0% {
+			-webkit-transform: perspective(400px) rotateX(90deg);
+			-ms-transform: perspective(400px) rotateX(90deg);
+			transform: perspective(400px) rotateX(90deg);
+			opacity: 0
+		}
+
+		40% {
+			-webkit-transform: perspective(400px) rotateX(-10deg);
+			-ms-transform: perspective(400px) rotateX(-10deg);
+			transform: perspective(400px) rotateX(-10deg)
+		}
+
+		70% {
+			-webkit-transform: perspective(400px) rotateX(10deg);
+			-ms-transform: perspective(400px) rotateX(10deg);
+			transform: perspective(400px) rotateX(10deg)
+		}
+
+		100% {
+			-webkit-transform: perspective(400px) rotateX(0);
+			-ms-transform: perspective(400px) rotateX(0);
+			transform: perspective(400px) rotateX(0);
+			opacity: 1
+		}
+	}
+
+	@-webkit-keyframes fadeIn {
+		0% {
+			opacity: 0
+		}
+
+		100% {
+			opacity: 1
+		}
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0
+		}
+
+		100% {
+			opacity: 1
+		}
+	}
+
+	@-webkit-keyframes fadeInDown {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(-20px);
+			transform: translateY(-20px)
+		}
+
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			transform: translateY(0)
+		}
+	}
+
+	@keyframes fadeInDown {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(-20px);
+			-ms-transform: translateY(-20px);
+			transform: translateY(-20px)
+		}
+
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0)
+		}
+	}
 </style>
 
-<script type="text/javascript" src=" http://yijuzhan.com/api/word.php?m=js"></script> 
+<script type="text/javascript" src=" http://yijuzhan.com/api/word.php?m=js"></script>
 <script type="text/javascript">
-var s = false;
-var t =document.getElementsByTagName("title")[0];
-if(s){
-t.innerHTML = str[0]+str[1];
-}else{
-t.innerHTML = str[0];
-}
+	var s = false;
+	var t = document.getElementsByTagName("title")[0];
+	if (s) {
+		t.innerHTML = str[0] + str[1];
+	} else {
+		t.innerHTML = str[0];
+	}
 </script>
 
 <body>
-<div id="content">
-<br />
-<div class="search_part">
-<a class="logo" href="folder://">
-<img class="smaller" src="img/google.gif"></img>
-</a>
-<br />
-<form onsubmit="return search()" class="search_bar">
-<input type="submit" id="search_submit" value="🇬" >
-<span><input class="search" type="text" value="" autocomplete="off" id="search_input" placeholder="✎..."></span>
-</form>
-</div>
-<br />
+	<div id="content">
+		<br />
+		<div class="search_part">
+			<a class="logo" href="folder://">
+				<img class="smaller" src="img/logo.png"></img>
+			</a>
+			<br />
+			<form onsubmit="return search()" class="search_bar">
+				<input type="submit" id="search_submit" value="🇬">
+				<span><input class="search" type="text" value="" autocomplete="off" id="search_input"
+						placeholder="✎..."></span>
+			</form>
+		</div>
+		<br />
 
-<div class="box">
-<a href="https://vitan.me"></a>
-<p><img class="icon" src="img/Vitan.png" ></p>
-<p class="url">vitan.me</p>
-</div>
+		<div class="box">
+			<a href="https://vitan.me"></a>
+			<p><img class="icon" src="img/Vitan.png"></p>
+			<p class="url">vitan.me</p>
+		</div>
 
-<div class="box">
-<a href="https://github.com"></a>
-<p><img class="icon" src="img/openhub.png" ></p>
-<p class="url">Github</p>
-</div>
+		<div class="box">
+			<a href="https://github.com"></a>
+			<p><img class="icon" src="img/openhub.png"></p>
+			<p class="url">Github</p>
+		</div>
 
-<div class="box">
-<a href="https://google.com/"></a>
-<p><img class="icon" src="img/Google1.png" ></p>
-<p class="url">Google</p>
-</div>
+		<div class="box">
+			<a href="https://google.com/"></a>
+			<p><img class="icon" src="img/Google1.png"></p>
+			<p class="url">Google</p>
+		</div>
 
-<div class="box">
-<a href="http://www.oneplusbbs.com/?from=head"></a>
-<p><img class="icon" src="img/oneplus_bbs.png" ></p>
-<p class="url">OnePlus</p>
-</div>​
+		<div class="box">
+			<a href="https://stackoverflow.com/"></a>
+			<p><img class="icon" src="img/stackoverflow.png"></p>
+			<p class="url">StackOverflow</p>
+		</div>​
 
-<div class="box">
-<a href="https://stackoverflow.com/"></a>
-<p><img class="icon" src="img/stackoverflow.png" ></p>
-<p class="url">StackOverflow</p>
-</div>​
+		<div class="box">
+			<a href="https://www.w3schools.com/"></a>
+			<p><img class="icon" src="img/w3cschool.png"></p>
+			<p class="url">w3school</p>
+		</div>​
 
-<div class="box">
-	<a href="https://www.w3schools.com/"></a>
-	<p><img class="icon" src="img/w3cschool.png" ></p>
-	<p class="url">w3school</p>
-</div>​
+		<div class="box">
+			<a href="http://www.oneplusbbs.com/?from=head"></a>
+			<p><img class="icon" src="img/oneplus_bbs.png"></p>
+			<p class="url">OnePlus</p>
+		</div>​
 
-<div class="box">
-	<a href="https://www.duboku.co"></a>
-	<p><img class="icon" src="img/video.png" ></p>
-	<p class="url">Duboku</p>
-</div>​
+		<div class="box">
+			<a href="https://www.duboku.co"></a>
+			<p><img class="icon" src="img/video.png"></p>
+			<p class="url">Duboku</p>
+		</div>​
 
-<div class="box">
-	<a href="https://love2.io"></a>
-	<p><img class="icon" src="img/love2.ico" ></p>
-	<p class="url">Love2</p>
-</div>
 
-<script type="text/javascript">function search(){if(document.getElementById("search_input").value != ""){window.location.href = "https://www.google.com/search?q=" + document.getElementById("search_input").value;document.getElementById("search_input").value = "";}return false;}</script>
+		<script type="text/javascript">
+			function search() {
+				if (document.getElementById("search_input").value != "") {
+					window.location.href = "https://www.google.com/search?q=" + document.getElementById("search_input").value;
+					document.getElementById("search_input").value = "";
+				}
+				return false;
+			}
+		</script>
 
-</div>
-
-<script type="text/javascript">function search(){if(document.getElementById("search_input").value != ""){window.location.href = "https://www.google.com/search?q=" + document.getElementById("search_input").value;document.getElementById("search_input").value = "";}return false;}</script>
+	</div>
 
 </body>
+
 </html>
