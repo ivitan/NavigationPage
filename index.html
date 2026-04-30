@@ -34,47 +34,64 @@
             </form>
         </section>
 
+        <!-- Edit Mode Toggle Button -->
+        <div class="edit-mode-toggle">
+            <button class="edit-mode-btn" id="edit-toggle-btn" title="Edit navigation links">✏️ Edit</button>
+            <span class="sync-status" id="sync-status"></span>
+        </div>
+
         <!-- Navigation Grid -->
         <section class="nav-section" aria-label="Quick Links">
-            <nav class="nav-grid">
-                <a href="https://vitan.me" class="nav-box" title="Visit Vitan's Website">
-                    <img class="nav-icon" src="img/Vitan.png" alt="Vitan" />
-                    <p class="nav-text">vitan.me</p>
-                </a>
-
-                <a href="https://github.com" class="nav-box" title="Visit GitHub">
-                    <img class="nav-icon" src="img/openhub.png" alt="GitHub" />
-                    <p class="nav-text">Github</p>
-                </a>
-
-                <a href="https://google.com" class="nav-box" title="Visit Google">
-                    <img class="nav-icon" src="img/Google1.png" alt="Google" />
-                    <p class="nav-text">Google</p>
-                </a>
-
-                <a href="https://stackoverflow.com" class="nav-box" title="Visit Stack Overflow">
-                    <img class="nav-icon" src="img/stackoverflow.png" alt="Stack Overflow" />
-                    <p class="nav-text">StackOverflow</p>
-                </a>
-
-                <a href="https://www.w3schools.com" class="nav-box" title="Visit W3Schools">
-                    <img class="nav-icon" src="img/w3cschool.png" alt="W3Schools" />
-                    <p class="nav-text">w3school</p>
-                </a>
-
-                <a href="https://www.oneplusbbs.com/?from=head" class="nav-box" title="Visit OnePlus BBS">
-                    <img class="nav-icon" src="img/oneplus_bbs.png" alt="OnePlus BBS" />
-                    <p class="nav-text">OnePlus</p>
-                </a>
-
-                <a href="https://www.duboku.co" class="nav-box" title="Visit Duboku">
-                    <img class="nav-icon" src="img/video.png" alt="Duboku" />
-                    <p class="nav-text">Duboku</p>
-                </a>
-            </nav>
+            <nav class="nav-grid" id="nav-grid"></nav>
         </section>
+
+        <!-- Edit Modal -->
+        <div id="edit-modal" class="edit-modal hidden" role="dialog" aria-labelledby="modal-title">
+            <div class="edit-modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">📝 Edit Navigation Links</h2>
+                    <button class="modal-close-btn" id="modal-close-btn" aria-label="Close edit modal">✕</button>
+                </div>
+                
+                <div class="modal-body">
+                    <!-- Links List -->
+                    <div class="edit-links-list" id="edit-links-list"></div>
+
+                    <!-- Add New Link Form -->
+                    <div class="add-link-form">
+                        <h3>➕ Add New Link</h3>
+                        <div class="form-group">
+                            <input type="text" id="new-link-title" placeholder="Link Title" maxlength="20" />
+                        </div>
+                        <div class="form-group">
+                            <input type="url" id="new-link-url" placeholder="https://example.com" />
+                        </div>
+                        <div class="form-group">
+                            <input type="url" id="new-link-icon" placeholder="Icon URL (optional)" />
+                        </div>
+                        <button class="btn-add-link" id="btn-add-link">Add Link</button>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn-cancel" id="btn-cancel">Cancel</button>
+                    <button class="btn-save" id="btn-save">✓ Save Changes</button>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <!-- Firebase Script (optional, for cloud sync) -->
+    <script defer src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+    
+    <!-- Application Scripts -->
+    <script src="storage.js"></script>
+    <script src="editor.js"></script>
     <script src="script.js"></script>
+    
+    <!-- Firebase Config (optional) -->
+    <script src="config.js" onerror="console.log('config.js not found, cloud sync disabled')"></script>
 </body>
 </html>
