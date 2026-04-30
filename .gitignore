@@ -1,0 +1,44 @@
+# System Files
+.DS_Store
+Thumbs.db
+.windows-build-tools
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Node/NPM
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+dist/
+build/
+.cache/
+.next/
+
+# OS
+.DS_Store
+desktop.ini
+
+# Misc
+.tmp/
+.temp/
+*.bak
