@@ -11,7 +11,7 @@ const Storage = (function() {
     const DEFAULT_LINKS = [
         {
             title: 'Vitan',
-            url: 'https://vitan.me',
+            url: 'https://h.ivitan.com',
             icon: 'img/Vitan.png'
         },
         {
